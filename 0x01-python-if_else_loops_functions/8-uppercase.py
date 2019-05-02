@@ -5,5 +5,5 @@ def uppercase(str):
         if ord(l) >= 97 and ord(l) <= 122:
             strfinal += (chr(ord(l) - 32))
         else:
-            strfinal +=l
+            strfinal += l
     print(strfinal)
