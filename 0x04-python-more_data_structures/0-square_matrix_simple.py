@@ -6,4 +6,4 @@ def square_matrix_simple(matrix=[]):
         for item in x:
             segunda.append(item * item)
         nueva.append(segunda)
-    return('{}'.format(nueva))
+    return nueva
