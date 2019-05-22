@@ -13,7 +13,6 @@ class Square:
     def position(self):
         return self.__position
 
-
     @size.setter
     def size(self, value):
             if type(value) is not int:
