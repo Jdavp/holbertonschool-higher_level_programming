@@ -36,7 +36,7 @@ class Square:
     def __str__(self):
         cuadrado = ""
         if self.__size == 0:
-            cuadrado += '\n'
+            cuadrado += ''
         else:
             cuadrado += self.__position[1] * '\n'
             for i in range(self.__size):
@@ -44,7 +44,7 @@ class Square:
                 cuadrado += self.__size * '#'
                 if i < self.__size - 1:
                     cuadrado += '\n'
-        return(cuadrado)
+        return cuadrado
 
     def my_print(self):
         if self.__size == 0:
