@@ -1,0 +1,13 @@
+The ``2-matrix_divided.py`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+This imports text file in for function add_integer.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>>matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
