@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+""" Module to divide all the items of a matrix
+"""
+
+
 def matrix_divided(matrix, div):
+    """Function to divide all the in a matrix for a given number
+    """
     te1 = 'matrix must be a matrix (list of lists) of integers/floats'
-    te2 = 'Each row of the matrix must have the same size'
+    ste2 = 'Each row of the matrix must have the same size'
     nueva = []
     if type(div) is not int and type(div) is not float:
         raise TypeError('div must be a number')
