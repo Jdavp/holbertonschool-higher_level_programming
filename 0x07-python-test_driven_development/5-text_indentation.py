@@ -7,7 +7,7 @@ def text_indentation(text):
     """ Function to print a string with a new with some special characters
     """
     i = 0
-    if type(text) is not str:
+    if type(text) is not str or None:
         raise TypeError('text must be a string')
     while i < len(text):
         print(text[i], end="")
