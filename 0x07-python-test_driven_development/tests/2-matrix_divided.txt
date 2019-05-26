@@ -60,4 +60,11 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 >>> matrix_divided()
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
->>>
+>>> matrix_divided(matrix, 'nan')
+Traceback (most recent call last):
+    raise TypeError('div must be a number')
+TypeError: div must be a number
+>>> matrix_divided(matrix, 2e3040)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> matrix_divided(matrix, 3.0)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
