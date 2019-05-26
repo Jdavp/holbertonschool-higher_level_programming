@@ -50,7 +50,7 @@ TypeError: Each row of the matrix must have the same size
 ...     [1, 2, 3]]
 >>> print(matrix_divided(matrix, 3))
 [[0.33, 0.67, 1.0]]
->>>>>> matrix_divided(matrix, 0)
+>>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
   raise ZeroDivisionError('division by zero')
 ZeroDivisionError: division by zero
