@@ -34,3 +34,11 @@ TypeError: b must be an integer
 >>> add_integer(,10)
 Traceback (most recent call last):
 SyntaxError: invalid syntax
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+    return (int(a) + int(b))
+ValueError: cannot convert float NaN to integer
+>>> add_integer(1e300, 2e3040)
+Traceback (most recent call last):
+    return (int(a) + int(b))
+OverflowError: cannot convert float infinity to integer

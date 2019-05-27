@@ -50,4 +50,21 @@ TypeError: Each row of the matrix must have the same size
 ...     [1, 2, 3]]
 >>> print(matrix_divided(matrix, 3))
 [[0.33, 0.67, 1.0]]
->>>
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+  raise ZeroDivisionError('division by zero')
+ZeroDivisionError: division by zero
+>>> matrix_divided(matrix,)
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> matrix_divided(matrix, 'nan')
+Traceback (most recent call last):
+    raise TypeError('div must be a number')
+TypeError: div must be a number
+>>> matrix_divided(matrix, 2e3040)
+[[0.0, 0.0, 0.0]]
+>>> matrix_divided(matrix, 3.0)
+[[0.33, 0.67, 1.0]]
