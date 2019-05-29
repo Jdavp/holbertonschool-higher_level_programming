@@ -6,8 +6,8 @@ class Rectangle:
     """declaring class rectangle"""
     def __init__(self, width=0, height=0):
         """initialiazing rectagule with 2 parameters"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -23,9 +23,9 @@ class Rectangle:
     def width(self, value):
         """setter for width"""
         if type(value) is not int:
-            raise TypeError('width must be an integer')
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError('width must be >= 0')
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @height.setter
