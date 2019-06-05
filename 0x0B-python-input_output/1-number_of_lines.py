@@ -4,7 +4,7 @@
 
 def number_of_lines(filename=""):
     '''reading a file'''
-    with open(filename, encoding= "utf-8") as myFile:
+    with open(filename, encoding="utf-8") as myFile:
 
         i = 0
         for c in myFile.readlines():
