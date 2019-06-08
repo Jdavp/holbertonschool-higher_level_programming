@@ -2,6 +2,7 @@
 '''the class Rectangle that inherits from Base'''
 from models.base import Base
 
+
 class Rectangle(Base):
     '''declaring clase rectangle that inherir from base'''
 
@@ -72,3 +73,17 @@ class Rectangle(Base):
     def area(self):
         ''' method to find the area'''
         return(self.__height * self.__width)
+
+    def display(self):
+        '''method to display a character'''
+        print(self.__y * "\n", end="")
+        for i in range(self.__height):
+                print(self.__x * " ", end="")
+                print(self.__width * '#')
+
+    def __str__(self):
+        """method to return a string of the object"""
+        return('[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
+                                                       self.__x, self.__y,
+                                                       self.__width,
+                                                       self.__height))

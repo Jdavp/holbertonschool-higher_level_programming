@@ -76,14 +76,14 @@ class Rectangle(Base):
 
     def display(self):
         '''method to display a character'''
-        print(self.__height * "\n", end="")
-        for y in range(self.width):
-            print(self.height * " ", end="")
-            print(self.width * '#')
+        print(self.__y * "\n", end="")
+        for i in range(self.__height):
+                print(self.__x * " ", end="")
+                print(self.__width * '#')
 
     def __str__(self):
         """method to return a string of the object"""
         return('[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
-                                                       self.x, self.y,
+                                                       self.__x, self.__y,
                                                        self.__width,
                                                        self.__height))
