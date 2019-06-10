@@ -87,3 +87,22 @@ class Rectangle(Base):
                                                        self.__x, self.__y,
                                                        self.__width,
                                                        self.__height))
+
+    def update(self, *args):
+        '''method to update attributes'''
+        for ite in range(len(args)):
+
+            if ite == 0:
+                super().__init__(args[ite])
+
+            if ite == 1:
+                self.__width = args[ite]
+
+            if ite == 2:
+                self.__height = args[ite]
+
+            if ite == 3:
+                self.__x = args[ite]
+
+            if ite == 4:
+                self.__y = args[ite]
