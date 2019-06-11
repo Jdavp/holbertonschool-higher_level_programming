@@ -9,7 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        '''initialazing the base case with id attributes'''
+        '''initializing the base case with id attributes'''
         if id is not None:
             self.id = id
         else:
@@ -28,10 +28,11 @@ class Base:
     def save_to_file(cls, list_objs):
         '''method writes the JSON string representation of a file'''
         nueval = []
+
         if list_objs is None:
             return nueval
         else:
             for y in list_objs:
-                nueval.append
-            with open(cls.__name__+json, mode="w", encoding="utf-8") as f:
-                return f.write(Base.to_json_string(list_objs))
+                nueval.append(cls.to_dictionary(y))
+            with open(cls.__name__+'.json', mode="w") as f:
+                return f.write(Base.to_json_string(nueval))
