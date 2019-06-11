@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!//bin/python3
 '''the class Rectangle that inherits from Base'''
 from models.base import Base
 
@@ -49,7 +49,7 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
-            raise ValueError('heigth must be > 0')
+            raise ValueError('height must be > 0')
         self.__height = value
 
     @x.setter
@@ -127,3 +127,8 @@ class Rectangle(Base):
 
                 if ite == 4:
                     self.__y = args[ite]
+
+    def to_dictionary(self):
+        '''method to return the directory representation of the object'''
+        return{'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+               'width': self.width}
