@@ -2,6 +2,7 @@
 '''the first class Base'''
 import json
 
+
 class Base:
     '''declaring a base clase'''
 

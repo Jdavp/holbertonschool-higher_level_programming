@@ -64,4 +64,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         '''method to return the directory representation of the object'''
-        return{'x': self.x, 'y': self.y, 'id': self.id,'size': self.size}
+        return{'x': self.x, 'y': self.y, 'id': self.id, 'size': self.size}
