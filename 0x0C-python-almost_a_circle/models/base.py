@@ -30,9 +30,9 @@ class Base:
         nueval = []
 
         if list_objs is None:
-            return("[]")
+            pass
         else:
             for y in list_objs:
                 nueval.append(cls.to_dictionary(y))
-            with open(cls.__name__+'.json', mode="w") as f:
-                return f.write(Base.to_json_string(nueval))
+        with open(cls.__name__+'.json', mode="w") as f:
+            f.write(Base.to_json_string(nueval))
