@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''the first class Base'''
-
+import json
 
 class Base:
     '''declaring a base clase'''
@@ -14,3 +14,23 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        '''method returns the JSON string representation'''
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return("[]")
+        else:
+            return(json.dumps(list_dictionaries))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        '''method writes the JSON string representation of a file'''
+        nueval = []
+        if list_objs is None:
+            return nueval
+        else:
+            for y in list_objs:
+                nueval.append
+            with open(cls.__name__+json, mode="w", encoding="utf-8") as f:
+                return f.write(Base.to_json_string(list_objs))

@@ -26,3 +26,42 @@ class Square(Rectangle):
         return('[Square] ({}) {}/{} - {}'.format(self.id,
                                                  self.x, self.y,
                                                  self.width))
+
+    def update(self, *args, **kwargs):
+        '''update attributes'''
+        if args is None or len(args) == 0:
+            for key, value in kwargs.items():
+
+                if key == 'id':
+                    self.id = value
+
+                if key == "size":
+                    self.height = value
+                    self.width = value
+
+                if key == 'x':
+                    self.x = value
+
+                if key == 'y':
+                    self.y = value
+
+        else:
+
+            for ite in range(len(args)):
+
+                if ite == 0:
+                    self.id = args[ite]
+
+                if ite == 1:
+                    self.height = args[ite]
+                    self.widht = args[ite]
+
+                if ite == 2:
+                    self.x = args[ite]
+
+                if ite == 3:
+                    self.y = args[ite]
+
+    def to_dictionary(self):
+        '''method to return the directory representation of the object'''
+        return{'x': self.x, 'y': self.y, 'id': self.id,'size': self.size}
