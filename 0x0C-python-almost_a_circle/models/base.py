@@ -30,7 +30,7 @@ class Base:
         nueval = []
 
         if list_objs is None:
-            return nueval
+            return("[]")
         else:
             for y in list_objs:
                 nueval.append(cls.to_dictionary(y))
