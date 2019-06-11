@@ -48,9 +48,9 @@ class Base:
         args = []
 
         if cls.__name__ is 'Rectangle':
-            nuevo = cls(1, 1)
+            dummy = cls(1, 1)
         else:
-            nuevo = cls(1)
+            dummy = cls(1)
 
-        nuevo.update(*args, **dictionary)
-        return nuevo
+        dummy.update(*args, **dictionary)
+        return dummy
