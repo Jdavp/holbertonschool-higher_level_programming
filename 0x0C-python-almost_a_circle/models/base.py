@@ -34,3 +34,9 @@ class Base:
                 nueval.append(cls.to_dictionary(y))
         with open(cls.__name__+'.json', mode="w") as f:
             f.write(Base.to_json_string(nueval))
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''method that returns the list of the JSON string representation'''
+        if json_string:
+            return json.loads(json_string)
