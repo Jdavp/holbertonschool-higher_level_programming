@@ -44,13 +44,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        '''method that that returns an instance with all attributes'''
+        '''method that returns an instance with all attributes'''
         args = []
 
         if cls.__name__ is 'Rectangle':
             nuevo = cls(1, 1)
-
-        if cls.__name__ is 'Square':
+        else:
             nuevo = cls(1)
 
         nuevo.update(*args, **dictionary)
