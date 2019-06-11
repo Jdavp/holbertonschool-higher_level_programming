@@ -29,7 +29,8 @@ class Base:
         '''method writes the JSON string representation of a file'''
         nueval = []
 
-        for y in list_objs:
+        if list_objs:
+            for y in list_objs:
                 nueval.append(cls.to_dictionary(y))
         with open(cls.__name__+'.json', mode="w") as f:
             f.write(Base.to_json_string(nueval))
