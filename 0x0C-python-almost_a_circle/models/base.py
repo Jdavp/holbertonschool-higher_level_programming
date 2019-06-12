@@ -27,13 +27,13 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         '''method writes the JSON string representation of a file'''
-        nueval = []
+        newl = []
 
         if list_objs:
             for y in list_objs:
-                nueval.append(cls.to_dictionary(y))
+                newl.append(cls.to_dictionary(y))
         with open(cls.__name__+'.json', mode="w") as f:
-            f.write(Base.to_json_string(nueval))
+            f.write(Base.to_json_string(newl))
 
     @staticmethod
     def from_json_string(json_string):
