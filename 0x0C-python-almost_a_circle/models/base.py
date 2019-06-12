@@ -61,4 +61,4 @@ class Base:
             with open(cls.__name__+'.json', mode='r') as f:
                 for itera in (cls.from_json_string(f.read())):
                     otralista.append(cls.create(**itera))
-                    return otralista
+                return otralista
