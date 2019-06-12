@@ -52,3 +52,12 @@ class Base:
             dummy = cls(1)
         cls.update(dummy, **dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        '''method to return a list of instances'''
+        otralista = []
+        if cls:
+            with open(cls.__name__+'.json', mode='r') as f:
+                for itera in (cls.from_json_string(f.read())):
+                    otralista.append(cls.create(**itera))
