@@ -44,13 +44,11 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        '''method that returns an instance with all attributes'''
+        '''create a new instance'''
         args = []
-
-        if cls.__name__ is 'Rectangle':
+        if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
         else:
             dummy = cls(1)
-
         dummy.update(*args, **dictionary)
         return dummy
