@@ -46,10 +46,9 @@ class Base:
     def create(cls, **dictionary):
         ''' create a new instance '''
 
-        args = []
         if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
         else:
             dummy = cls(1)
-        dummy.update(*args, **dictionary)
+        cls.update(dummy, **dictionary)
         return dummy
