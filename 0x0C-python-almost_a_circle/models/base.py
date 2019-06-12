@@ -44,7 +44,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        '''create a new instance'''
+        ''' create a new instance '''
+
         args = []
         if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
