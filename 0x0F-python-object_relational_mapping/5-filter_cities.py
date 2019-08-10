@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'script that takes in an argument and displays all values that matches the argument'
+'takes in an argument and displays all values that matches the argument'
 import MySQLdb
 from sys import argv
 if __name__ == '__main__':
