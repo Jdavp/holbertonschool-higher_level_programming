@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# script that fetches https://intranet.hbtn.io/status
+'script that fetches https://intranet.hbtn.io/status'
 import urllib.request
 from sys import argv
 
