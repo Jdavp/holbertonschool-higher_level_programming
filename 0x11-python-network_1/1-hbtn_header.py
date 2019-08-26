@@ -4,6 +4,6 @@ if __name__ == "__main__":
     import urllib.request
     from sys import argv
 
-with urllib.request.urlopen(argv[1]) as response:
-    headers = response.info()
-    print(headers["X-Request-Id"])
+    with urllib.request.urlopen(argv[1]) as response:
+        headers = response.info()
+        print(headers["X-Request-Id"])
