@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-'takes in a URL and an email, sends a POST request to the passed URL'
+'request to the URL and displays the body of the response (decoded in utf-8)'
 if __name__ == "__main__":
     import urllib.request
     from sys import argv
 
     req = urllib.request.Request(argv[1])
     try:
-        urllib.request.urlopen(req)
+        with urllib.request.urlopen(req) as f:
+            print(f.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
-        print(e.code)
-        print(e.read().decode('utf-8'))
+        print('Error code: {}'.format(e.code))
