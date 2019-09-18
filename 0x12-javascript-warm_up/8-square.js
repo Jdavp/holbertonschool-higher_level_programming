@@ -3,7 +3,7 @@
 const i = process.argv[2];
 let x; let y; let z = '';
 
-if (i) {
+if (parseInt(i)) {
   for (x = 0; x < i; x++) {
     z = '';
     for (y = 0; y < i; y++) {
